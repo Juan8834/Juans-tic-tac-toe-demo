@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Juans-tic-tac-toe-demo/static/css/main.ecde75fc.css",
+    "main.js": "/Juans-tic-tac-toe-demo/static/js/main.81880f2b.js",
+    "index.html": "/Juans-tic-tac-toe-demo/index.html",
+    "main.ecde75fc.css.map": "/Juans-tic-tac-toe-demo/static/css/main.ecde75fc.css.map",
+    "main.81880f2b.js.map": "/Juans-tic-tac-toe-demo/static/js/main.81880f2b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ecde75fc.css",
+    "static/js/main.81880f2b.js"
+  ]
+}
