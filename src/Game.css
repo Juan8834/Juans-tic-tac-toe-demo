@@ -1,0 +1,268 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #101011;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+h1 {
+  color: #0724df;
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.game-board {
+  margin-bottom: 20px;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  background: #0765f1;
+  border: 2px solid #090a0f;
+  border-radius: 12px;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 8px rgba(233, 21, 21, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.square:hover {
+  background-color: #0a8cf1;
+}
+
+.square:active {
+  transform: scale(0.9);
+}
+
+.square.winning {
+  background-color: #ffd700;
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* Animate Xs and Os with glow */
+.square span {
+  display: inline-block;
+  transform: scale(0);
+  opacity: 0;
+  animation: appearGlow 0.4s forwards;
+}
+
+.x-value {
+  color: #ff3b3b;
+  text-shadow: 0 0 8px #ff3b3b, 0 0 12px #ff6b6b;
+}
+
+.o-value {
+  color: #1fddff;
+  text-shadow: 0 0 8px #1fddff, 0 0 12px #4defff;
+}
+
+@keyframes appearGlow {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    filter: blur(2px);
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.fade {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Turns, winner, draw */
+.game-info {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.x-turn {
+  color: #ff3b3b;
+  font-weight: bold;
+}
+
+.o-turn {
+  color: #1fddff;
+  font-weight: bold;
+}
+
+.winner {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.draw {
+  color: #ff4081;
+  font-weight: bold;
+}
+
+/* Buttons */
+.reset-btn,
+.toggle-mode-btn {
+  background: #0724df;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.reset-btn:hover,
+.toggle-mode-btn:hover {
+  background: #0af112;
+  transform: scale(1.05);
+}
+
+/* Modern mode toggle button */
+.mode-btn {
+  background: linear-gradient(135deg, #0724df, #0af112);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 24px;
+  margin: 15px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mode-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.mode-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Fade/Slide animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glow title */
+.glow-title {
+  color: #0724df;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #0724df, 0 0 20px #0724df, 0 0 40px #0724df, 0 0 80px #0724df;
+  animation: glowPulse 2.5s infinite alternate;
+}
+
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 10px #0724df, 0 0 20px #0724df, 0 0 40px #0724df, 0 0 80px #0724df;
+  }
+  100% {
+    text-shadow: 0 0 20px #0af112, 0 0 40px #0af112, 0 0 80px #0af112, 0 0 160px #0af112;
+  }
+}
+
+/* Responsive board and squares */
+@media (max-width: 768px) {
+  .square {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+    line-height: 70px;
+  }
+
+  h1.glow-title {
+    font-size: 36px;
+  }
+
+  .game {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .square {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    line-height: 60px;
+    margin: 4px;
+  }
+
+  .scoreboard {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+  }
+
+  .mode-btn,
+  .reset-btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
