@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+## Juan's Tic-Tac-Toe Demo 🎮
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Demo
 
-## Available Scripts
+An interactive Tic-Tac-Toe game built with React, featuring animated Xs and Os, glowing UI, responsive design, and optional play against the computer. Perfect for showcasing React state management, component architecture, and fun UI animations.
 
-In the project directory, you can run:
+Features ✨
 
-### `npm start`
+2 Modes: Play against a friend or a simple AI 🤖
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Animated Xs and Os: Glowing and scaling effects for each move
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Confetti Celebration: Visual feedback when a player wins 🎉
 
-### `npm test`
+Scoreboard: Tracks wins, losses, and draws
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Move History: Jump back to any previous move
 
-### `npm run build`
+Reset & Mode Toggle: Restart the game or switch modes at any time
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Responsive Design: Fully playable on desktop, tablet, and mobile
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Modern UI: Clean board design, glowing titles, and interactive buttons
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `npm run eject`
+Installation & Setup 🛠️
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Clone the repository:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+git clone https://github.com/Juan8834/Juans-tic-tac-toe-demo.git
+cd Juans-tic-tac-toe-demo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Install dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm install
 
-## Learn More
+Start the development server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Open http://localhost:3000
+ to view the game in your browser.
+```
+## Deployment 🚀
 
-### Code Splitting
+This project is deployed via GitHub Pages:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+npm run deploy
 
-### Analyzing the Bundle Size
+Your live demo will be available at:
+https://Juan8834.github.io/Juans-tic-tac-toe-demo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Technologies Used 🧰
 
-### Making a Progressive Web App
+React 18 – Frontend library
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Canvas-Confetti – Confetti animation on win
 
-### Advanced Configuration
+CSS3 – Animations, transitions, and responsive design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+GitHub Pages – Hosting the live demo
 
-### Deployment
+## Game Logic Overview 🧠
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The game maintains a history of board states using React useState.
 
-### `npm run build` fails to minify
+Determines winners by checking all possible winning lines.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Supports undo moves via move history buttons.
+
+Optional computer AI plays as "O" in vs Computer mode (random valid move).
+
+Winning line is highlighted, and a confetti effect is triggered on win.
+
+## Future Improvements 💡
+
+Smarter AI using minimax algorithm
+
+Dark/Light mode toggle
+
+Sound effects for moves and wins
+
+Animations for draw results
+
+Author
+
+Juan Peralta – Full-stack developer in transition from 15 years in retail/loss prevention.
+
+GitHub: Juan8834
+
+Portfolio: juan8834-github-io.vercel.app
