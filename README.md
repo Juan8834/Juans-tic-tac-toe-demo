@@ -4,7 +4,7 @@ Live Demo
 
 An interactive Tic-Tac-Toe game built with React, featuring animated Xs and Os, glowing UI, responsive design, and optional play against the computer. Perfect for showcasing React state management, component architecture, and fun UI animations.
 
-Features ✨
+## Features ✨
 
 2 Modes: Play against a friend or a simple AI 🤖
 
@@ -82,10 +82,6 @@ Dark/Light mode toggle
 Sound effects for moves and wins
 
 Animations for draw results
-
-Author
-
-Juan Peralta – Full-stack developer in transition from 15 years in retail/loss prevention.
 
 GitHub: Juan8834
 
